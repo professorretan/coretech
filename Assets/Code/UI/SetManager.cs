@@ -71,7 +71,7 @@ public class SetManager : MonoBehaviour
 
     static void RemoveAndDestroySet(Set set)
     {
-        Inst.Sets.RemoveAll(s => (object)s == set);
+        Inst.Sets.RemoveAll(s => s == set);
 
         if (set)
         {
