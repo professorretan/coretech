@@ -13,4 +13,10 @@ public class WinSet : Set {
 	void Update () {
 		
 	}
+
+    public void OnPlayAgainClicked()
+    {
+        CloseSet();
+        SetManager.OpenSet<MainMenuSet>();
+    }
 }

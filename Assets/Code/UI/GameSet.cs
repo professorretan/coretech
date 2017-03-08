@@ -24,6 +24,7 @@ public class GameSet : Set {
     // DEBUG: These are just for testing menu flow
     public void OnLoseGameClicked()
     {
+        CloseSet();
         SetManager.OpenSet<LoseSet>();
     }
 }
