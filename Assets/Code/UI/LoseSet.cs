@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuSet : Set {
+public class LoseSet : Set {
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +13,4 @@ public class MainMenuSet : Set {
 	void Update () {
 		
 	}
-
-    public void OnPlayClicked()
-    {
-        // Close this set and open the game set
-        CloseSet();
-        SetManager.OpenSet<GameSet>();        
-    }
 }
