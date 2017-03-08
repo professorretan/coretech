@@ -7,6 +7,7 @@ public enum GameState
 {
     GAME_INITIALIZING,
     GAME_WAITING,
+    GAME_LOADING,
     GAME_RUNNING,
 }
 
@@ -21,6 +22,7 @@ public class Game : MonoBehaviour {
 
     // Variables used for state transitions
     [NonSerialized] public bool WantsToBeInWaitState = false;
+    [NonSerialized] public bool WantsToBeInLoadingState = false;
     [NonSerialized] public bool WantsToBeInRunningState = false;
 
     void Awake()
@@ -54,7 +56,16 @@ public class Game : MonoBehaviour {
 
                 break;
             case GameState.GAME_WAITING:
-                // TODO: Go into this state and do nothing until the game is ready to run (for instance on the main menu)
+                // TODO: Go into this state and do nothing until the game is ready to run (for instance on the main menu or on the win/lose screens)
+
+                // If we want to be in the loading state, do the state transition
+                if (WantsToBeInLoadingState)
+                    DoStateTransition(GameState.GAME_LOADING);
+
+                break;
+            case GameState.GAME_LOADING:
+                // TODO: Load the level
+                Levels.LoadLevel(()=> WantsToBeInRunningState = true);
 
                 // If we want to be in the running state, do the state transition
                 if (WantsToBeInRunningState)
@@ -80,6 +91,15 @@ public class Game : MonoBehaviour {
     // Use this to do state transitions in case we later need to keep track of the previous state
     private void DoStateTransition(GameState newState)
     {
+        // Set the new state
         CurrentState = newState;
+
+        // Clear all of our flags
+        WantsToBeInWaitState = false;
+        WantsToBeInLoadingState = false;
+        WantsToBeInRunningState = false;
     }
+
+    // Use this to start the game
+
 }

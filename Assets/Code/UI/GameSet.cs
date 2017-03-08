@@ -17,6 +17,9 @@ public class GameSet : Set {
     // DEBUG: These are just for testing menu flow
     public void OnWinGameClicked()
     {
+        Game.Inst.WantsToBeInWaitState = true;
+        Levels.CloseLevel();
+
         CloseSet();
         SetManager.OpenSet<WinSet>();
     }
@@ -24,6 +27,9 @@ public class GameSet : Set {
     // DEBUG: These are just for testing menu flow
     public void OnLoseGameClicked()
     {
+        Game.Inst.WantsToBeInWaitState = true;
+        Levels.CloseLevel();
+
         CloseSet();
         SetManager.OpenSet<LoseSet>();
     }

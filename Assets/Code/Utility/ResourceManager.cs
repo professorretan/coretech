@@ -18,13 +18,19 @@ public class ResourceManager {
         }
     }
 
-    public static GameObject Create(string prefabName)
+    public static GameObject Create(string prefabPath)
     {
-        if (!Inst.cachedObjects.ContainsKey(prefabName))
+        if (!Inst.cachedObjects.ContainsKey(prefabPath))
         {
-            Inst.cachedObjects[prefabName] = Resources.Load(prefabName);
+             Inst.cachedObjects[prefabPath] = Resources.Load(prefabPath);
         }
 
-        return UnityEngine.Object.Instantiate(Inst.cachedObjects[prefabName]) as GameObject;
+        if(Inst.cachedObjects[prefabPath] == null)
+        {
+            Debug.Assert(false, "Could not load prefab with name: " + prefabPath);
+            return null;
+        }
+
+        return UnityEngine.Object.Instantiate(Inst.cachedObjects[prefabPath]) as GameObject;
     }
 }
