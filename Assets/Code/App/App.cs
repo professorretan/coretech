@@ -33,7 +33,6 @@ public class App : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SoundManager.Update();
 
 #if UNITY_EDITOR
         // ------------------------
