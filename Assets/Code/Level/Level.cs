@@ -18,14 +18,18 @@ public class Level : MonoBehaviour {
     public void SpawnPlayer()
     {
         // Create the player using the ResourceManager
-        GameObject playerGameObject = ResourceManager.Create("Characters/Player");
+        GameObject playerGameObject = ResourceManager.Create("Characters/Player/Player");
 
-        // Add to spawned characters list so we can clean up later
-        SpawnedCharacters.Add(playerGameObject);
+        // Make sure we successfully spawned (this could fail if we moved something)
+        if (playerGameObject)
+        {
+            // Add to spawned characters list so we can clean up later
+            SpawnedCharacters.Add(playerGameObject);
 
-        // Set the player to the start position 
-        if (PlayerStartTransform)
-            playerGameObject.transform.position = PlayerStartTransform.position;
+            // Set the player to the start position 
+            if (PlayerStartTransform)
+                playerGameObject.transform.position = PlayerStartTransform.position;
+        }
     }
 
     // Spawn the enemy and set their location to a specific spawn point
@@ -35,13 +39,17 @@ public class Level : MonoBehaviour {
         if (transformIndex < EnemySpawnTransforms.Count)
         {
             // Spawn in the an enemy using the ResourceManager
-            GameObject enemyGameObject = ResourceManager.Create("Characters/Enemy");
+            GameObject enemyGameObject = ResourceManager.Create("Characters/Enemies/Archer/Enemy");
 
-            // Add to spawned characters list so we can clean up later
-            SpawnedCharacters.Add(enemyGameObject);
+            // Make sure we successfully spawned (this could fail if we moved something)
+            if (enemyGameObject)
+            {
+                // Add to spawned characters list so we can clean up later
+                SpawnedCharacters.Add(enemyGameObject);
 
-            // Set the enemy to the spawn transform index position
-            enemyGameObject.transform.position = EnemySpawnTransforms[transformIndex].position;
+                // Set the enemy to the spawn transform index position
+                enemyGameObject.transform.position = EnemySpawnTransforms[transformIndex].position;
+            }
         }
         else
             Debug.LogWarning("Enemy spawn index outside of valid range.");
@@ -52,16 +60,20 @@ public class Level : MonoBehaviour {
     public void SpawnEnemyAtRandom()
     {
         // Spawn in the an enemy using the ResourceManager
-        GameObject enemyGameObject = ResourceManager.Create("Characters/Enemy");
+        GameObject enemyGameObject = ResourceManager.Create("Characters/Enemies/Archer/Enemy");
 
-        // Add to spawned characters list so we can clean up later
-        SpawnedCharacters.Add(enemyGameObject);
+        // Make sure we successfully spawned (this could fail if we moved something)
+        if (enemyGameObject)
+        { 
+            // Add to spawned characters list so we can clean up later
+            SpawnedCharacters.Add(enemyGameObject);
 
-        // Get a random valid index
-        int randomSpawnIndex = Random.Range(0, EnemySpawnTransforms.Count);
+            // Get a random valid index
+            int randomSpawnIndex = Random.Range(0, EnemySpawnTransforms.Count);
 
-        // Set the enemy to the spawn transform index position
-        enemyGameObject.transform.position = EnemySpawnTransforms[randomSpawnIndex].position;
+            // Set the enemy to the spawn transform index position
+            enemyGameObject.transform.position = EnemySpawnTransforms[randomSpawnIndex].position;
+        }
     }
 
     // Clean up all of the spawned in characters
