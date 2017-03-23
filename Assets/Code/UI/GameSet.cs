@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class GameSet : Set {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     // DEBUG: These are just for testing menu flow
     public void OnWinGameClicked()
     {
@@ -32,5 +22,12 @@ public class GameSet : Set {
 
         CloseSet();
         SetManager.OpenSet<LoseSet>();
+    }
+
+    // What do we do when we click anywhere on the screen aside from the buttons
+    public void OnScreenClicked()
+    {
+        // Get the player instance and play the attack anim
+        Player.Inst.PlayAttackAnimation();
     }
 }
