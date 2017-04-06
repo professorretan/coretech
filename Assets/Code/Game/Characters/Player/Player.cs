@@ -14,19 +14,6 @@ public enum PlayerState
 
 public class Player : MonoBehaviour {
 
-/* THIS IS AN EXAMPLE OF A SINGLETON WHERE YOU CAN ACCESS IT FROM ANYWHERE */
-    // There will never be more than one player
-    public static Player Inst { get { return m_Inst; } }
-    static Player m_Inst;
-
-    // This the class constructor and we assign the static instance here
-    public Player()
-    {
-        if (m_Inst == null)
-            m_Inst = this;
-    }
-/*///////////////////////SINGLETON EXAMPLE//////////////////////////*/
-
     // The player's current state
     PlayerState CurrentState = PlayerState.PLAYER_IDLE;
 
@@ -35,6 +22,9 @@ public class Player : MonoBehaviour {
 
     // The animator component
     public Animator PlayerAnimator;
+
+    // Player score
+    public int PlayerScore = 0;
 
     // Update is called once per frame
     void Update() {
@@ -52,7 +42,9 @@ public class Player : MonoBehaviour {
     {
         // Trigger attack animation on player
         if (PlayerAnimator)
-            PlayerAnimator.SetTrigger("hit");
+            PlayerAnimator.SetTrigger("Attack");
+
+        PlayerScore += 100;
     }
 
     // Turn on the player attack collider

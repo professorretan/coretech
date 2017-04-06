@@ -44,9 +44,6 @@ public class Game : MonoBehaviour {
             case GameState.GAME_INITIALIZING:
                 // TODO: Add all of your initialization logic here                
 
-                // Load all of your data
-                DataLoader.LoadData();
-
                 // Load main menu set
                 SetManager.OpenSet<MainMenuSet>((mms) => WantsToBeInWaitState = true);
 

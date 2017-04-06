@@ -16,6 +16,7 @@ public class Level : MonoBehaviour {
 
     // The player spawned in the level
     public GameObject PlayerGameObject;
+    public Player Player;
 
     // Spawn the player and set his location based on the player start
     public void SpawnPlayer()
@@ -32,6 +33,9 @@ public class Level : MonoBehaviour {
             // Set the player to the start position 
             if (PlayerStartTransform)
                 PlayerGameObject.transform.position = PlayerStartTransform.position;
+
+            // Store the player component in the level
+            Player = PlayerGameObject.GetComponent<Player>();
         }
     }
 

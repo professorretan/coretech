@@ -28,6 +28,9 @@ public class GameSet : Set {
     public void OnScreenClicked()
     {
         // Get the player instance and play the attack anim
-        Player.Inst.PlayAttackAnimation();
+        Player player = Levels.CurrentLevel.Player;
+
+        if(player)
+            player.PlayAttackAnimation();
     }
 }
