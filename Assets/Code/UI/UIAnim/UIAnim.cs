@@ -1,10 +1,4 @@
-﻿//
-// UIAnim.cs
-//
-// Copyright 2016 MunkyFun. All rights reserved.
-//
-
-namespace UI.UIAnim
+﻿namespace UI.UIAnim
 {
     using UnityEngine;
     using Extensions;

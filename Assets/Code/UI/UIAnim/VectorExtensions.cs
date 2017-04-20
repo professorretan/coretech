@@ -1,8 +1,3 @@
-//
-// VectorExtensions.cs
-//
-// Copyright 2016 MunkyFun. All rights reserved.
-//
 
 using UnityEngine;
 using System.Collections;
