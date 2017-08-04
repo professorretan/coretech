@@ -8,11 +8,11 @@ public class DataLoader : MonoBehaviour {
     {
         // Save the player data
         if (Input.GetKeyDown(KeyCode.S))
-            SaveData();
+            SaveDataToJson();
 
         // Load the player data
         if (Input.GetKeyDown(KeyCode.L))
-            LoadData();
+            LoadDataFromJson();
 
     }
 
@@ -30,6 +30,15 @@ public class DataLoader : MonoBehaviour {
 
     }
 
+    public static void SaveDataToJson()
+    {
+        PlayerData playerSaveData = new PlayerData();
+        playerSaveData.PlayerScore = Levels.CurrentLevel.Player.PlayerScore;
+
+        string playerJson = JsonUtility.ToJson(playerSaveData);
+        File.WriteAllText(Application.persistentDataPath + "ScoreJson.json", playerJson.ToString());
+    }
+
     public static void LoadData()
     {
         // First check if the file exists
@@ -42,6 +51,18 @@ public class DataLoader : MonoBehaviour {
             file.Close();
 
             // Set the player score based on the save data
+            Levels.CurrentLevel.Player.PlayerScore = playerSaveData.PlayerScore;
+        }
+    }
+
+    public static void LoadDataFromJson()
+    {
+        if(File.Exists(Application.persistentDataPath + "ScoreJson.json"))
+        {
+            string playerJson = File.ReadAllText(Application.persistentDataPath + "ScoreJson.json");
+            PlayerData playerSaveData = new PlayerData();
+            playerSaveData = JsonUtility.FromJson<PlayerData>(playerJson);
+
             Levels.CurrentLevel.Player.PlayerScore = playerSaveData.PlayerScore;
         }
     }
