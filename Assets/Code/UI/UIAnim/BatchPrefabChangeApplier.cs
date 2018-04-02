@@ -435,7 +435,7 @@
             DoForAllAssets(title, "Shader", ".shader", action, modifyAssets);
         }
 
-        [MenuItem("Assets/+MunkyFun/List Referenced Assets")]
+        [MenuItem("Assets/UI/List Referenced Assets")]
         public static void FindReferencedAssets()
         {
             var selectedAssets = Selection.objects;
@@ -454,7 +454,7 @@
                 visitedPaths.Where(x => !x.EndsWith(".meta")).ToArray().JoinString("\n"));
         }
 
-        [MenuItem("Assets/+MunkyFun/List Referencing Assets (Very Slow)")]
+        [MenuItem("Assets/UI/List Referencing Assets (Very Slow)")]
         public static void FindReferencingAssets()
         {
             var selectedAssets = Selection.objects;
