@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 45e86c3481751164189c93011657c7b4
+timeCreated: 1526239033
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armchair
+    100002: Bed
+    100004: //RootNode
+    100006: Blue_book
+    100008: Bookcase
+    100010: Chair
+    100012: Closet
+    100014: Desk Lamp
+    100016: Desktop
+    100018: Door
+    100020: Drawer
+    100022: Floor
+    100024: Green_book
+    100026: Laptop
+    100028: Nightstand
+    100030: Nightstand lamp
+    100032: Nightstand lamp.001
+    100034: Nightstand.001
+    100036: Red_book
+    100038: Remote control
+    100040: Roof
+    100042: Tv
+    100044: Wall
+    100046: Wall.001
+    100048: Wall.002
+    100050: Wall.003
+    100052: Yellow_book
+    400000: Armchair
+    400002: Bed
+    400004: //RootNode
+    400006: Blue_book
+    400008: Bookcase
+    400010: Chair
+    400012: Closet
+    400014: Desk Lamp
+    400016: Desktop
+    400018: Door
+    400020: Drawer
+    400022: Floor
+    400024: Green_book
+    400026: Laptop
+    400028: Nightstand
+    400030: Nightstand lamp
+    400032: Nightstand lamp.001
+    400034: Nightstand.001
+    400036: Red_book
+    400038: Remote control
+    400040: Roof
+    400042: Tv
+    400044: Wall
+    400046: Wall.001
+    400048: Wall.002
+    400050: Wall.003
+    400052: Yellow_book
+    2300000: Armchair
+    2300002: Bed
+    2300004: Blue_book
+    2300006: Bookcase
+    2300008: Chair
+    2300010: Closet
+    2300012: Desk Lamp
+    2300014: Desktop
+    2300016: Door
+    2300018: Drawer
+    2300020: Floor
+    2300022: Green_book
+    2300024: Laptop
+    2300026: Nightstand
+    2300028: Nightstand lamp
+    2300030: Nightstand lamp.001
+    2300032: Nightstand.001
+    2300034: Red_book
+    2300036: Remote control
+    2300038: Roof
+    2300040: Tv
+    2300042: Wall
+    2300044: Wall.001
+    2300046: Wall.002
+    2300048: Wall.003
+    2300050: Yellow_book
+    3300000: Armchair
+    3300002: Bed
+    3300004: Blue_book
+    3300006: Bookcase
+    3300008: Chair
+    3300010: Closet
+    3300012: Desk Lamp
+    3300014: Desktop
+    3300016: Door
+    3300018: Drawer
+    3300020: Floor
+    3300022: Green_book
+    3300024: Laptop
+    3300026: Nightstand
+    3300028: Nightstand lamp
+    3300030: Nightstand lamp.001
+    3300032: Nightstand.001
+    3300034: Red_book
+    3300036: Remote control
+    3300038: Roof
+    3300040: Tv
+    3300042: Wall
+    3300044: Wall.001
+    3300046: Wall.002
+    3300048: Wall.003
+    3300050: Yellow_book
+    4300000: Yellow_book
+    4300002: Door
+    4300004: Wall.001
+    4300006: Wall.002
+    4300008: Wall.003
+    4300010: Roof
+    4300012: Floor
+    4300014: Wall
+    4300016: Green_book
+    4300018: Blue_book
+    4300020: Desk Lamp
+    4300022: Laptop
+    4300024: Remote control
+    4300026: Tv
+    4300028: Drawer
+    4300030: Closet
+    4300032: Nightstand
+    4300034: Nightstand lamp.001
+    4300036: Nightstand lamp
+    4300038: Armchair
+    4300040: Nightstand.001
+    4300042: Bed
+    4300044: Chair
+    4300046: Desktop
+    4300048: Bookcase
+    4300050: Red_book
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -44,11 +44,11 @@ public class Levels {
     // Spawn a player and enemy after the level finishes loading
     private static void OnLevelLoadComplete()
     {
-        if(CurrentLevel)
-        {
-            CurrentLevel.SpawnPlayer();
-            CurrentLevel.SpawnEnemyAtRandom();
-        }
+        //if(CurrentLevel)
+        //{
+        //    CurrentLevel.SpawnPlayer();
+        //    CurrentLevel.SpawnEnemyAtRandom();
+        //}
     }
 
     // Close the current level

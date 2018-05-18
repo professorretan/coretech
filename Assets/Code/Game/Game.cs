@@ -62,7 +62,7 @@ public class Game : MonoBehaviour {
                 break;
             case GameState.GAME_LOADING:
                 // TODO: Load the level
-                Levels.LoadLevel("Level1", ()=> WantsToBeInRunningState = true);
+                Levels.LoadLevel("House", ()=> WantsToBeInRunningState = true);
 
                 // If we want to be in the running state, do the state transition
                 if (WantsToBeInRunningState)

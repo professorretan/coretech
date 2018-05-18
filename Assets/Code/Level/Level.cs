@@ -46,17 +46,17 @@ public class Level : MonoBehaviour {
         if (transformIndex < EnemySpawnTransforms.Count)
         {
             // Spawn in the an enemy using the ResourceManager
-            GameObject enemyGameObject = ResourceManager.Create("Characters/Enemies/Archer/Enemy");
+            //GameObject enemyGameObject = ResourceManager.Create("Characters/Enemies/Archer/Enemy");
 
-            // Make sure we successfully spawned (this could fail if we moved something)
-            if (enemyGameObject)
-            {
-                // Add to spawned characters list so we can clean up later
-                SpawnedCharacters.Add(enemyGameObject);
+            //// Make sure we successfully spawned (this could fail if we moved something)
+            //if (enemyGameObject)
+            //{
+            //    // Add to spawned characters list so we can clean up later
+            //    SpawnedCharacters.Add(enemyGameObject);
 
-                // Set the enemy to the spawn transform index position
-                enemyGameObject.transform.position = EnemySpawnTransforms[transformIndex].position;
-            }
+            //    // Set the enemy to the spawn transform index position
+            //    enemyGameObject.transform.position = EnemySpawnTransforms[transformIndex].position;
+            //}
         }
         else
             Debug.LogWarning("Enemy spawn index outside of valid range.");
